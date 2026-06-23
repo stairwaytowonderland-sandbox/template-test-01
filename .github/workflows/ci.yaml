@@ -2,8 +2,6 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
     paths-ignore:
       - 'README.md'
 
@@ -12,7 +10,7 @@ on:
 jobs:
   debug:
     runs-on: ubuntu-latest
-    if: github.event.before != '0000000000000000000000000000000000000000'
+    # if: github.event.before != '0000000000000000000000000000000000000000'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
